@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Nunito:ital,wght@0,600;0,1000;1,400&family=Open+Sans:ital,wght@0,400;0,700;1,700;1,800&family=REM:wght@400;500&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,700&family=Varela&family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: black;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 1.2rem;
+   margin-bottom: 25px;
+   text-align: center;
+   margin-right: 30px;
+}
+
+.container{
+    position: relative;
+    color: aliceblue;
+    width: 50rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px silver;
+    background: black;
+    padding: 20px 30px;
+    border-color: palevioletred;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    height: 100%;
+    width: 100%;
+    z-index: -200;
+    filter: blur(100px);
+    background-color: palevioletred;
+}
+
+.generator{
+    display: flex;
+    gap: 13px;
+    width: 100%;
+}
+
+input{
+    width: 80%;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 8px 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+input:hover{
+    border-color: palevioletred;
+    transform: scale(0.98);
+}
+
+button{
+    width: 25%;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 5px;
+    border-color: aliceblue;
+    border: 2px solid white;
+    color: azure;
+    font-size: 15px;
+    transition: all 0.4s ease;
+    margin-bottom: 20px;
+}
+
+button:hover{
+    transform: scale(0.98);
+    border-color: palevioletred;
+}
+
+.loading{
+    display: none;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    margin-right: 45px;
+    margin-bottom: 15px;
+    
+}
+
+.result{
+    margin-top: 20px;
+  /* margin-left: 105px;  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+button:disabled, button[disabled]{
+    border: 1px solid rgb(73, 94, 87);
+    background-color: palevioletred;
+    color: black;
+    cursor: auto;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 80%;
+}
+
+.grid img{
+    border-radius: 8px;
+    max-width: 100%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.grid img:hover{
+    border-color: palevioletred;
+}
